@@ -37,14 +37,14 @@
 			light.position.set( 10, 4, 10 );
 			scene.add( light ); 
 
-			var terrain = new THREE.TextureLoader().load('1_earth_16k.jpg');
+			var terrain = new THREE.TextureLoader().load('https://media.githubusercontent.com/media/mpecic/rotating-earth-demo/master/1_earth_16k.jpg');
 			var geometry = new THREE.SphereGeometry(size_factor, longitudes, latitudes);
 			geometry.scale(1, polar_factor, 1);
 			var material = new THREE.MeshPhongMaterial( { map: terrain } );
 			var earth = new THREE.Mesh( geometry, material );
 			scene.add( earth );
 
-			var clouds = new THREE.TextureLoader().load('storm_clouds_8k.png');
+			var clouds = new THREE.TextureLoader().load('https://media.githubusercontent.com/media/mpecic/rotating-earth-demo/master/storm_clouds_8k.png');
 			geometry = new THREE.SphereGeometry(size_factor * cloud_factor, longitudes, latitudes);
 			material = new THREE.MeshPhongMaterial( { alphaMap: clouds, transparent: true } );
 			var layer = new THREE.Mesh( geometry, material );
