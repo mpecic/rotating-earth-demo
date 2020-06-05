@@ -43,13 +43,13 @@
 			var material = new THREE.MeshPhongMaterial( { map: terrain } );
 			var earth = new THREE.Mesh( geometry, material );
 			scene.add( earth );
-
+/*
 			var clouds = new THREE.TextureLoader().load('https://media.githubusercontent.com/media/mpecic/rotating-earth-demo/master/storm_clouds_8k.png');
 			geometry = new THREE.SphereGeometry(size_factor * cloud_factor, longitudes, latitudes);
 			material = new THREE.MeshPhongMaterial( { alphaMap: clouds, transparent: true } );
 			var layer = new THREE.Mesh( geometry, material );
 			scene.add(layer);
-
+*/
 			// camera.position.z = 5;
 			camera.position.set(0, 2, 5);
 			camera.lookAt(0, 0, 0); 
@@ -60,7 +60,7 @@
 			stats.domElement.style.top = '0px';
 			document.body.appendChild( stats.dom );
 
-			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+//			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
 			var clientXold, clientYold;
 			function onDocumentMouseMove( event ) {
@@ -79,10 +79,10 @@
 				requestAnimationFrame( animate );
 
 				earth.rotation.y += rotation_speed;
-				layer.rotation.y += mouseX / 20000;
-				layer.rotation.z += mouseY / 20000;
-				mouseX = 0;
-				mouseY = 0;
+//				layer.rotation.y += mouseX / 20000;
+//				layer.rotation.z += mouseY / 20000;
+//				mouseX = 0;
+//				mouseY = 0;
 
 				renderer.render( scene, camera );
 			};
