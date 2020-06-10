@@ -1,2 +1,0 @@
-1_earth_16k.jpg filter=lfs diff=lfs merge=lfs -text
-storm_clouds_8k.png filter=lfs diff=lfs merge=lfs -text
